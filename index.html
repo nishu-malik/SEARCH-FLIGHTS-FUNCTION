@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+
+    <!-- Adding css file -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Adding font owesome file -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Adding iconify -->
+    
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+    <!-- Adding font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+
+    <title>Template</title>
+
+  </head>
+  <body>
+   
+    <!-- ---------------- Breadcrum --------------- -->
+    <section class="breadcrumb-section ">
+      <ul class="breadcrumb-navigation">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Flights booking</a>
+        </li>
+        <li>
+          <a href="#">Cheap Flights</a>
+        </li>
+        <li id="breadcrum-last-child">
+          <a href="#"><span class="origin">ABC</span> to <span class="destination">XYZ</span> Flights</li></a>
+        </li>
+      </ul>
+    </section>
+    
+
+    <section class="breadcrumb-section-mobile mobile-view">
+      <p class="breadcrum-mobile-fp">Select your onward flight | <span class="count-flights">84</span> flights  </p>
+      <p class="breadcrum-mobile-sp">
+        <span class="destination"> ABC </span>-> <span class="origin">XYZ</span> | <span class="Date">27 Aug</span> | <span class="Travellers">1 Traveller</span>
+      <span class="cabin-class"></span> </p>
+    </section>
+
+
+
+
+
+
+
+    <!------------------ Search bar ----------------->
+    
+    <form class="search-container">
+      <!-- Trip type selection option -->
+      <label class="trip-type-label">Trip Type</label>
+      <div class="trip-options">
+        <span>
+          <input
+            class="radio-custom"
+            id="oneway"
+            name="tripType"
+            type="radio"
+            value="oneway"
+          />
+          <label class="radio-custom-label active" for="oneway"
+            >One way</label
+          >
+        </span>
+        <span class="radio-spacing">
+          <input
+            class="radio-custom"
+            id="roundtrip"
+            name="tripType"
+            type="radio"
+            value="roundtrip"
+          />
+          <label class="radio-custom-label" for="roundtrip">Round trip</label>
+        </span>
+      </div>
+      <!-- end of Trip type selection option -->
+      <!-- second selection option -->
+      <div class="data-fields">
+        <div class="form-data-input">
+          <label for="origin">Origin*</label>
+
+          <div class="input-container">
+            <input autocomplete="off" type="text" class="origin-input" />
+            <div class="swap-btn">
+              <span
+                class="iconify iconify-swap"
+                style="transform: rotate(0deg) scale(1)"
+                data-icon="charm:swap-horizontal"
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-data-input">
+          <label for="destination">Destination*</label>
+
+          <div class="input-container">
+            <input autocomplete="off" type="text" class="destination-input" />
+          </div>
+        </div>
+        <div class="form-data-input travel-date-data">
+          <label for="departDate">Travel Date*</label>
+
+          <div class="selectiongroup">
+            <input
+              autocomplete="off"
+              autocorrect="off"
+              type="date"
+              style="font-size: 14px"
+              class="calender-input"
+            />
+            <!-- <span class="iconify" data-icon="mdi:calendar-month"></span> -->
+            <button type="button" class="active">Today</button>
+            <button type="button">Tomorrow</button>
+          </div>
+        </div>
+
+        <div class="form-data-input traveller-data-container">
+          <label for="travellers">Travellers*</label>
+          <div class="input-container">
+            <input
+              class="text-input travellers-input"
+              readonly="readonly"
+              type="text"
+              value="1 Ad, 0 Ch, 0 In, Eco"
+            />
+          </div>
+          <div class="traverller-overlay">
+            <div class="traveller-overlay-tabs-group">
+              <button type="button" class="traveller-tab active">
+                Economy
+              </button>
+              <button type="button" class="traveller-tab">
+                Premium Economy
+              </button>
+              <button type="button" class="traveller-tab">Business</button>
+            </div>
+            <div class="traveller-details">
+              <!-- single detail -->
+              <div class="traveller-detail-single">
+                <span> Adults (Above 12 years) </span>
+                <div class="traveller-detail-container">
+                  <div class="traveller-detail-icon minus-icon">
+                    <span class="iconify" data-icon="mdi:minus"></span>
+                  </div>
+                  <span class="traveller-data-count adults-count">1</span>
+                  <div class="traveller-detail-icon plus-icon">
+                    <span class="iconify" data-icon="mdi:plus"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- end of  single detail -->
+              <!-- single detail -->
+              <div class="traveller-detail-single">
+                <span> Children (2-12 years) </span>
+                <div class="traveller-detail-container">
+                  <div class="traveller-detail-icon minus-icon">
+                    <span class="iconify" data-icon="mdi:minus"></span>
+                  </div>
+                  <span class="traveller-data-count children-count">0</span>
+                  <div class="traveller-detail-icon plus-icon">
+                    <span class="iconify" data-icon="mdi:plus"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- end of  single detail -->
+              <!-- single detail -->
+              <div class="traveller-detail-single">
+                <span> Infants (Below 2 years) </span>
+                <div class="traveller-detail-container">
+                  <div class="traveller-detail-icon minus-icon">
+                    <span class="iconify" data-icon="mdi:minus"></span>
+                  </div>
+                  <span class="traveller-data-count infants-count">0</span>
+                  <div class="traveller-detail-icon plus-icon">
+                    <span class="iconify" data-icon="mdi:plus"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- end of  single detail -->
+            </div>
+          </div>
+        </div>
+        <button class="search-btn" type="button">
+          <span>Search</span>
+        </button>
+        <div class="form-data-input mobile-cabin-class">
+          <label for="cabinType">Cabin Class</label>
+          <div
+            class="traveller-overlay-tabs-group mobile-cabin-class-buttons"
+          >
+            <button type="button" class="traveller-tab active">
+              Economy
+            </button>
+            <button type="button" class="traveller-tab">
+              Premium Economy
+            </button>
+            <button type="button" class="traveller-tab">Business</button>
+          </div>
+        </div>
+      </div>
+      <!-- end  second selection option -->
+
+      <!-- defence forces checkbox  -->
+      <div class="form-defence-data">
+        <div class="control-checkbox">
+          <div>
+            <input
+              class="checkbox-custom"
+              form-control-name="isDefence"
+              id="isDefenceSearch"
+              type="checkbox"
+              style="font-size: 15px"
+            />
+            <label class="checkbox-custom-label" for="isDefenceSearch"
+              >I am from the Defence Forces
+            </label>
+          </div>
+          <div class="question-icon">
+            <span
+              class="iconify"
+              data-icon="ant-design:question-circle-outlined"
+            ></span>
+          </div>
+          <div class="overlaypanel-content-container">
+            <span class="overlaypanel-content"
+              >Use this option if you are, a serving/retired personnel of the
+              Indian Armed Forces or Indian Paramilitary Forces. You may also
+              select this option if you are valid Dependent
+              (Spouse/Child/Parent) of a serving/retired Indian Armed Forces
+              and Indian Paramilitary Forces Personnel.
+              <b>
+                note valid military ID will be required for all passengers at
+                Airline's check-in counter for tickets booked using this
+                option.
+              </b></span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- end of defence forces checkbox -->
+      <!-- defence forces selection option -->
+      <div class="form-defence-options" style="display: none">
+        <label class="defence-options-tagline" for="userCategory"
+          >User Category
+          <span>(serving, retired and dependants)*</span>
+        </label>
+        <div class="defence-options-container">
+          <div class="defence-dropdown-input">
+            <input
+              class="text-input defence-input"
+              readonly="true"
+              type="text"
+              value="Indian Army"
+            />
+            <div class="defence-dropdown-icon">
+              <span class="iconify" data-icon="mdi:chevron-down"></span>
+            </div>
+          </div>
+          <!-- drop down icon -->
+
+          <div class="defence-dropdown-container" style="display: none">
+            <ul class="defence-dropdown-list">
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value">Indian Army</span>
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value">Indian Navy</span>
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value"
+                  >Indian Air Force</span
+                >
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value"
+                  >Indian Coast Guard</span
+                >
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value"
+                  >Paramilitary Forces</span
+                >
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value"
+                  >Under Trainee Cadets</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="search-btn mobile-search-btn" type="button">
+        <span>Search Flights</span>
+      </button>
+      <!-- end of defence forces selection option -->
+    </form>
+    <!-- <div class="search-bar ">
+
+
+      
+      <div class="search-bar-section-1">
+      <form action="#">
+        <input class="trip-type-radio-btn" type="radio" id="oneWay" name="tripType" value='oneWay'>
+        <label class="trip-type-radio-label" for="oneWay">One way</label>
+        <input class="trip-type-radio-btn" type="radio" id="roundTrip" name="tripType" value='roundTrip'>
+        <label class="trip-type-radio-label" for="roundTrip">Round trip</label>
+      </form>
+      </div>
+
+
+
+
+      <div class="search-bar-section-2">
+        <form class="search-details" action="#">
+
+          <div class="search-input">
+            <label class="search-input-refrence" for="Origin">Origin*</label><br>
+            <input class="search-input-box" type="text" id="Origin" name="Origin" ><br>
+          </div>
+          
+          <i class="fas fa-exchange-alt fa-2x"></i>
+
+
+          <div class="search-input">
+            <label class="search-input-refrence" for="Destination">Destination*</label><br>
+            <input class="search-input-box" type="text" id="Destination" name="Destination" ><br>
+          </div>
+
+          <div class="search-input">
+            <label class="search-input-refrence " for="Date">Travel Date*</label><br>
+            <input class="search-input-box search-date" type="date" id="Date" name="Date" ><br>
+          </div>
+
+          <div class="search-input">
+            <label class="search-input-refrence" for="Travellers">Travellers*</label><br>
+            <input class="search-input-box" type="text" id="Travellers" name="Travellers" ><br>
+          </div>
+
+          <button class="search-btn">SEARCH</button>
+        </form> 
+      </div>
+
+
+
+
+
+      <div class="search-bar-section-3">
+        <input type="checkbox" id="conform-army-checkbox">
+        <label for="conform-army-checkbox"></label>
+        <p class="conform-army-para">I am from the Defence Forces</p>
+        <a href="#"><i class="far fa-question-circle fa-lg"></i></a>
+      </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="search-bar-mobile mobile-view">
+
+      <p class="search-bar-mobile-para"> Trip Type </p>
+
+      <div class="search-bar-section-1">
+      <form action="#">
+        <input class="trip-type-radio-btn" type="radio" id="oneWay" name="tripType" value='oneWay'>
+        <label class="trip-type-radio-label" for="oneWay">One way</label>
+        <input class="trip-type-radio-btn" type="radio" id="roundTrip" name="tripType" value='roundTrip'>
+        <label class="trip-type-radio-label" for="roundTrip">Round trip</label>
+      </form>
+      </div>
+
+
+
+
+      <div class="search-bar-section-2">
+        <form class="search-details" action="#">
+
+          <div class="search-input">
+            <label class="search-input-refrence" for="Origin">Origin*</label><br>
+            <input class="search-input-box" type="text" id="Origin" name="Origin" ><br>
+          </div>
+          
+          <i class="fas fa-exchange-alt fa-2x"></i>
+
+
+          <div class="search-input">
+            <label class="search-input-refrence" for="Destination">Destination*</label><br>
+            <input class="search-input-box" type="text" id="Destination" name="Destination" ><br>
+          </div>
+
+          <div class="search-input">
+            <label class="search-input-refrence " for="Date">Travel Date*</label><br>
+            <input class="search-input-box search-date" type="date" id="Date" name="Date" >
+            <button class="tdy mobile-extra-btn">Today</button>
+            <button class="tmrw mobile-extra-btn">Tomorrow</button>
+            <br>
+          </div>
+
+          <div class="search-input">
+            <label class="search-input-refrence" for="Travellers">Travellers*</label><br>
+            <input class="search-input-box" type="text" id="Travellers" name="Travellers" ><br>
+          </div>
+
+          <div class="search-input mobile-view">
+            <p>Cabin Class</p>
+              <button class="mobile-extra-btn" name="cabin-class">Economy</button>
+              <button class="mobile-extra-btn" name="cabin-class">Premium Economy</button>
+              <button class="mobile-extra-btn" name="cabin-class">Business</button>
+          </div>
+
+          <button class="search-btn">SEARCH</button>
+        </form> 
+      </div>
+
+
+
+
+
+      <div class="search-bar-section-3">
+        <div>
+          <input type="checkbox" id="conform-army-checkbox">
+          <label for="conform-army-checkbox"></label>
+          <p class="conform-army-para">I am from the Defence Forces</p>
+        </div>
+        
+        <a href="#"><i class="far fa-question-circle fa-2x "></i></a>
+      </div>
+
+      <button class="mobile-view search-btn-2">SEARCH</button>
+
+    </div> -->
+
+<!------------------ Information ----------------->
+
+<section class="information">
+
+  <!------------------ Left ----------------->
+
+  <div class="left">
+
+      <div class="top-flights-from">
+        <p class="top-flights-para">Top Flights <span class="origin">ABC</span></p>
+        <ul class="top-flights-ul">
+          <li> <span class="origin">ABC</span> to <span class="origin-destination-1">city-1</span> Flights</li>
+          <li> <span class="origin">ABC</span> to <span class="origin-destination-2">city-2</span> Flights</li>
+          <li> <span class="origin">ABC</span> to <span class="origin-destination-3">city-3</span> Flights</li>
+          <li> <span class="origin">ABC</span> to <span class="origin-destination-4">city-4</span> Flights</li>
+          <li> <span class="origin">ABC</span> to <span class="origin-destination-5">city-5</span> Flights</li>
+          <li> <span class="origin">ABC</span> to <span class="origin-destination-6">city-6</span> Flights</li>
+          <li> <span class="origin">ABC</span> to <span class="origin-destination-7">city-7</span> Flights</li>
+          <li> <span class="origin">ABC</span> to <span class="origin-destination-8">city-8</span> Flights</li>
+        </ul>
+      </div>
+
+
+
+      <div class="top-flights-to">
+        <p class="top-flights-para">Top Flights <span class="destination">ABC</span></p>
+        <ul class="top-flights-ul">
+          <li> <span class="destination">ABC</span> to <span class="destination-destination-1">city-1</span> Flights</li>
+          <li> <span class="destination">ABC</span> to <span class="destination-destination-2">city-2</span> Flights</li>
+          <li> <span class="destination">ABC</span> to <span class="destination-destination-3">city-3</span> Flights</li>
+        </ul>
+      </div>
+
+      <div class="top-flights-dummy-1">
+        <p class="top-flights-para" >Top Flights <span class="dummy-city-1">ABC</span></p>
+        <ul class="top-flights-ul">
+          <li> <span class="dummy-city-1">ABC</span> to <span class="dummy-city-1-destination-1">city-1</span> Flights</li>
+          <li> <span class="dummy-city-1">ABC</span> to <span class="dummy-city-1-destination-2">city-2</span> Flights</li>
+        </ul>
+      </div>
+
+      <div class="top-flights-dummy-2">
+        <p class="top-flights-para">Top Flights <span class="dummy-city-2">ABC</span></p>
+        <ul class="top-flights-ul">
+          <li> <span class="dummy-city-2">ABC</span> to <span class="dummy-city-2-destination-1">city-1</span> Flights</li>
+        </ul>
+      </div>
+
+  </div>
+
+
+  
+
+  <!------------------ Right ----------------->
+
+  <div class="right">
+
+
+    <div class="showing-result-for">
+      <h1>Showing result for flights from <span class="origin">ABC</span> to <span class="destination">XYZ</span> </h1>
+      <ul id="showing-result-for-list">
+        <h2>Best Discount and Flight Fares</h2>
+        <!-- <li>Lowest Fare from Delhi to Mumbai on 01 Sep 2021 -  ₹ 2000
+</li>
+        <li>Book Delhi to Mumbai flights at cheapest airfare. For fastest booking and best discounts on flight tickets visit udChalo. Also check cheapest return Mumbai to Delhi flight tickets online here. 
+</li> -->
+      </ul>
+      
+      
+    </div>
+
+
+    <section class="mobile-view">
+
+      <div class="top-flights-heading-mobile-view">
+        <img src="img/flight-black.svg" alt="Img not found">
+        <p class="top-flights-para">Top Flights Routes</p>
+      </div>
+
+          
+          <ul class="top-flights-ul">
+            <li> <span class="origin">ABC</span> to <span class="origin-destination-1">XYZ</span> Flights</li>
+            <li> <span class="origin">ABC</span> to <span class="origin-destination-2">XYZ</span> Flights</li>
+            <li> <span class="origin">ABC</span> to <span class="origin-destination-3">XYZ</span> Flights</li>
+            <li> <span class="origin">ABC</span> to <span class="origin-destination-4">XYZ</span> Flights</li>
+            <li> <span class="origin">ABC</span> to <span class="origin-destination-5">XYZ</span> Flights</li>
+            <li> <span class="origin">ABC</span> to <span class="origin-destination-6">XYZ</span> Flights</li>
+            <li> <span class="origin">ABC</span> to <span class="origin-destination-7">XYZ</span> Flights</li>
+            <li> <span class="origin">ABC</span> to <span class="origin-destination-8">XYZ</span> Flights</li>
+          </ul>
+
+  
+  
+  
+  
+          <ul class="top-flights-ul">
+            <li> <span class="destination">ABC</span> to <span class="destination-destination-1">XYZ</span> Flights</li>
+            <li> <span class="destination">ABC</span> to <span class="destination-destination-2">XYZ</span> Flights</li>
+            <li> <span class="destination">ABC</span> to <span class="destination-destination-3">XYZ</span> Flights</li>
+          </ul>
+      
+  
+          <ul class="top-flights-ul">
+            <li> <span class="dummy-city-1">ABC</span> to <span class="dummy-city-1-destination-1">XYZ</span> Flights</li>
+            <li> <span class="dummy-city-1">ABC</span> to <span class="dummy-city-1-destination-2">XYZ</span> Flights</li>
+          </ul>
+       
+  
+     
+
+          <ul class="top-flights-ul">
+            <li> <span class="dummy-city-2">ABC</span> to <span class="dummy-city-2-destination-1">XYZ</span> Flights</li>
+          </ul>
+
+
+    </section>
+
+    
+  <!-- ------------- FAQ ------------- -->
+
+  <section class="right-display">
+
+    <div class="accordion">
+
+      <div class="faq-heading-div">
+        <img src="img/enquiryQuestionMark.svg" alt="Img not found" class="faq-enquiry-img">
+        <p class="faq-first-para">Frequently Asked Questions- <span class="origin">ABCDEF</span> to <span class="destination">UVWXYZ</span> Flight Information</p>
+      </div>
+
+      <div class="accordion-item">
+
+        <button class="accordion-header">
+          <p class="question-content">How to book <span class="origin">ABC</span> to <span class="destination">XYZ</span> Flight on UdChalo?</p>
+          <i class="fas fa-angle-down"></i>
+        </button>
+
+        <div class="accordion-body">
+          <ul>
+            <p>Kindly follow below mentioned process to book your <span class="origin">ABC</span> to <span class="destination">XYZ</span> Flight tickets:</p>
+            <li>Login with your Email ID / Registered Mobile Number and Password</li>  
+            <li>Enter your travel details as requested on the website and click on 'Search Flights' ,i.e. source city(<span class="origin">ABC</span>), destination city(<span class="destination">XYZ</span>), travel date, number of traveller etc.</li>
+            <li>Click on Search and you will get the directory of all <span class="origin">ABC</span> to <span class="destination">XYZ</span> Flights sorted by airfare with wide range of filters. </li>
+            <li>Click on Search and you will get the options of all <span class="origin">ABC</span> to <span class="destination">XYZ</span> sorted by airfare with wide range of other filters.</li>
+            <li>Check the flights available as per your convenience and proceed to book.</li>
+            <li>On the payment page, enter the requested information and you’re ready to generate your PNR.</li>
+          </ul>
+        </div>
+
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <p class="question-content">How can I pay for my <span class="origin">ABC</span> to <span class="destination">XYZ</span> flights? </p>
+            <i class="fas fa-angle-down"></i>
+          </button>
+
+          <div class="accordion-body">
+            <ul >
+              <li>For online booking, we accept payments from debit & credit cards, net banking, UPI, PAYTM. </li>  
+              <li>For tickets booked through our booking offices, you can pay by cash or by using your credit and debit cards.</li>
+              
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+          <button class="accordion-header">
+            <p class="question-content">How much baggage can I carry on my <span class="origin">ABC</span> to <span class="destination">XYZ</span> flight?</p> 
+            <i class="fas fa-angle-down"></i>
+          </button>
+
+          <div class="accordion-body">
+            <ul >
+              <li>You can carry up to 7 kg of cabin baggage and 15 kg of check-in luggage per person on an economy <span class="origin">ABC</span> to <span class="destination">XYZ</span> Flight.</li>  
+              <li>The <span class="origin">ABC</span> to <span class="destination">XYZ</span> Air India Flight allows 7 kg of cabin baggage and 20 kg of check-in luggage per person.</li>
+              
+            </ul>
+          </div>
+
+        </div>
+
+
+        <div class="accordion-item">
+
+          <button class="accordion-header">
+            <p class="question-content">Where will I board my Flight at <span class="origin">ABC</span> and deboard at <span class="destination">XYZ</span> ?</p> 
+            <i class="fas fa-angle-down"></i>
+          </button>
+
+          <div class="accordion-body">
+            <ul >
+              <li>you will be boarding your Flight at Indira Gandhi International Airport and deboard it Sardar Vallabhbhai Patel Airport for your <span class="origin">ABC</span> to <span class="destination">XYZ</span>  Flight.</li>
+              
+            </ul>
+          </div>
+
+        </div>
+
+
+
+        <div class="accordion-item">
+
+          <button class="accordion-header">
+            <p class="question-content">How do I get my boarding pass for my <span class="origin">ABC</span> to <span class="destination">XYZ</span>  flights?</p> 
+            <i class="fas fa-angle-down"></i>
+          </button>
+
+          <div class="accordion-body">
+            <ul >
+              <li>You need to show your E–ticket confirmation email and your E–ticket number at the check–in counter. The airline representative will issue your boarding pass at that time.</li>
+              
+            </ul>
+          </div>
+
+        </div>
+
+    </div>  
+
+
+  <!------------------ To about ----------------->
+
+
+
+  <div>
+    <h1 class="about-heading">About <span class="destination">XYZ</span></h1>
+    <div class="about-box">
+
+      <div class="about-box-segment">
+
+        <div class="about-which">
+          <img src="img/about the city.svg" alt="Img not found">
+          <p>About the city</p>
+        </div>
+        <div class="about-description ">
+          The commercial capital of India, the heart of Bollywood, and a melting pot of people and cultures. This city is always on the move and always in a hurry, but has a lot to offer from history to arts to shopping and nightlife for every kind of tourist that comes her way.
+        </div>
+      </div>
+      
+
+
+      <div class="about-box-segment">
+
+        <div class="about-which">
+          <img src="img/Airports and Railways.svg" alt="Img not found">
+          <p> Airports and Railways</p>
+        </div>
+        <div class="about-description ">
+          The Chhatrapati Shivaji International Airport lies about 30 kilometres north of the city. The Santa Cruz Domestic Airport is about 4.5 kilometres from the international airport and 26 kilometres north of the city. The major railway stations in Mumbai are Mumbai Central, Vashi Railway Station and Lokmanya Tilak. 
+        </div>
+      </div>
+
+
+      <div class="about-box-segment">
+
+        <div class="about-which">
+          <img src="img/Must try food.svg" alt="Img not found">
+          <p>Must try food</p>
+        </div>
+        <div class="about-description ">
+          Make sure you sample the local flavours of Mumbai on your trip. For non-vegetarians, a must-try is seafood at Trishna or Gajalee for its garlic-butter crabs and koliwadi prawns. For vegetarians, a must-eat is vada pao and pao bhaji at Chowpatty. If you are looking for intellectual conversation, stop at Jehangir Art Gallery for a cup of tea at the gallery’s quaint little café, Samovar.
+        </div>
+      </div>
+
+
+      <div class="about-box-segment ">
+
+        <div class="about-which">
+          <img src="img/Must visit Places.svg" alt="Img not found">
+          <p>Must visit Places</p>
+        </div>
+        <div class="about-description ">
+          On your trip to Mumbai, make sure to take a walk along Marine Drive all the way to the popular Chowpatty Beach. For a divine experience, head to Shree Siddhivinayak temple. For a dose of history, visit the Gateway of India. The Gateway is also the starting point for ferries heading towards the ancient Elephanta Caves.
+        </div>
+      </div>
+
+
+
+      <div class="about-box-segment">
+
+        <div class="about-which">
+          <img src="img/Climate of Mumbai.svg" alt="Img not found">
+          <p>Climate of Mumbai </p>
+        </div>
+        <div class="about-description ">
+          From November to February, winter months are the most pleasant in Mumbai. Humidity starts rising from March as summers start approaching. The maximum temperature in May can go as high as 40°C. The predominant season in Mumbai is the monsoon from June to October. If you are travelling between June and September, be prepared for recurrent rainfall through your trip.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!------------------ Popular air routes ----------------->
+
+  <div class="popular-air-routes">
+
+
+    <div class="popular-air-routes-heading">
+      <img src="img/Popular Air Routes.svg" alt="Img not found">
+      <p>Popular Air Routes</p>
+    </div>
+
+    <div class="table-to">
+      <table>
+
+
+          <tr>
+            <th>From <span class="destination">XYZ</span></th>
+            <th>Destination</th>
+            <th>Lowest Fare</th>
+            <th>Date of Journey</th>
+          </tr>
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-1">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-1">Rs 1814</span>
+          </td>
+          <td>
+            <span class=" to-date-clr to-date-1">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-2">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-2">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-2">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-3">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-3">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-3">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-4">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-4">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-4">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-5">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-5">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-5">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-6">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-6">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-6">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+
+      </table>
+    </div>
+
+
+
+
+    <div class="table-from">
+      <table>
+
+
+          <tr>
+            <th>From <span class="destination">XYZ</span></th>
+            <th>Destination</th>
+            <th>Lowest Fare</th>
+            <th>Date of Journey</th>
+          </tr>
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-1">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-1">Rs 1814</span>
+          </td>
+          <td>
+            <span class=" to-date-clr to-date-1">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-2">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-2">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-2">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-3">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-3">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-3">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-4">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-4">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-4">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-5">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-5">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-5">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <span class="destination">XYZ</span>
+          </td>
+          <td>
+            <span class="to-city-6">Kolkatta</span>
+          </td>
+          <td>
+            <span class="to-price-6">Rs 1814</span>
+          </td>
+          <td>
+            <span class="to-date-clr to-date-6">27 Aug, 2021</span>
+          </td>
+        </tr>
+
+
+
+      </table>
+    </div>
+
+
+    <div class="imp-note">
+      <span class="imp-word">Important :</span>Important : Fares shown are indicative and subject to change until ticketed. Prices are guaranteed only at the time of purchase.
+    </div>
+
+  </div>
+
+  </section>
+
+</section>
+
+
+
+<!------------------ JavaScript for function ----------------->
+
+
+    <script>
+      fetch("./jsonData.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(XL_row_object => {
+
+        // console.log(XL_row_object);
+
+
+        XL_row_object.forEach(function(row){
+          if(row["Route"] == "JSA-DEL")
+          {
+              let origin_=document.getElementsByClassName("origin");
+              for (let i = 0; i < origin_.length; i++) {
+                // console.log(origin_[i].innerHTML=row["From"]);
+                origin_[i].innerHTML=row["From"];
+              }
+                    
+
+              let destination_=document.getElementsByClassName("destination");
+              for (let i = 0; i < destination_.length; i++) {
+                //  console.log(destination_[i].innerHTML=row["To"]);
+                destination_[i].innerHTML=row["To"];
+              }
+
+              let showing_result=row["Top Content"].split('.');
+
+              for (let i = 0; i < showing_result.length-1 ; i++) {
+
+                let node=document.createElement("LI");
+                let textnode=document.createTextNode(showing_result[i]);
+                node.appendChild(textnode);
+                document.getElementById('showing-result-for-list').appendChild(node);
+                
+              }
+
+
+              let about_=row["About City"];
+              let abt_section=document.getElementsByClassName("about-description");
+
+
+              const abt_section_0=about_.slice( about_.indexOf('!') +1 , about_.lastIndexOf('!'));
+              abt_section[0].innerHTML=abt_section_0;
+              // console.log(abt_section_0);
+
+
+              const abt_section_1=about_.slice( about_.indexOf('Connectivity :') + 15 , about_.indexOf('Must Eat :'));
+              abt_section[1].innerHTML=abt_section_1;
+              // console.log(abt_section_1);
+
+
+              const abt_section_2=about_.slice( about_.indexOf('Must Eat :') + 11 , about_.indexOf('Places to Visit :'));
+              abt_section[2].innerHTML=abt_section_2;
+              // console.log(abt_section_2);
+
+
+              const abt_section_3=about_.slice( about_.indexOf('Places to Visit :') + 18 , about_.indexOf('Best Season to Visit :'));
+              abt_section[3].innerHTML=abt_section_3;
+              // console.log(abt_section_3);
+
+
+              const abt_section_4=about_.slice( about_.indexOf('Best Season to Visit :') + 23 , about_.lastIndexOf(`"`));
+              abt_section[4].innerHTML=abt_section_4;
+              // console.log(abt_section_4);
+
+
+
+          }
+        })
+  
+  });
+  
+   
+  </script>
+  
+
+
+
+
+
+
+  
+    <!------------------ JavaScript for accordian ----------------->
+
+    
+    <script>
+        const acc_btns = document.querySelectorAll(".accordion-header");
+        const acc_contents = document.querySelectorAll(".accordion-body");
+
+        acc_btns.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+
+            e.stopPropagation();
+
+            // console.log("pressed ",e.target)
+
+            acc_contents.forEach((acc) => {
+
+              // console.log("acc",acc)
+
+              if (
+                btn.nextElementSibling !== acc &&
+                acc.classList.contains("active")
+              ) 
+              {
+                acc.classList.remove("active");
+                acc_btns.forEach((btn) => btn.classList.remove("active"));
+              }
+            });
+
+            const panel = btn.nextElementSibling;
+            // console.log(panel);
+            panel.classList.toggle("active")  
+            // console.log(panel.classList);
+            btn.classList.toggle("active");
+          });
+        });
+
+        window.onclick = (e) => {
+          if (!e.target.matches(".accordion-header")) {
+            acc_btns.forEach((btn) => btn.classList.remove("active"));
+            acc_contents.forEach((acc) => acc.classList.remove("active"));
+          }
+        };
+    </script>
+
+    
+
+
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    
+  </body>
+  <script src="script.js"></script>
+
+</html>
